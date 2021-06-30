@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="BooksManager.AddBookPage"
+             BackgroundColor="#B4F6C8">
+    <ContentPage.Content>
+        <StackLayout Margin="45,25,45,0">
+            <Label Text="Add book"
+               HorizontalOptions="Center"
+               FontSize="30"
+               TextColor="Black"
+               FontFamily="Comic Sans MS"
+               FontAttributes="Bold"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15"
+               FontFamily="Comic Sans MS"
+               TextColor="Black"/>
+        <Label />
+        <Entry Placeholder="Title"
+               Text="{Binding Name}"
+               IsSpellCheckEnabled="true"
+               FontFamily="Footlight MT Light"/>
+        <Entry Placeholder="Author"
+               Text="{Binding Author}" 
+               FontFamily="Footlight MT Light"/>
+            <Entry Placeholder="description"
+               Text="{Binding Description}" 
+               FontFamily="Footlight MT Light"/>
+            <Button Text="Add"
+                Clicked="OnAddedButtonClicked"
+                FontSize="15" 
+                TextColor="Black"
+                FontFamily="Comic Sans MS"
+                BackgroundColor="#87E3F2"
+                FontAttributes="Bold"/>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

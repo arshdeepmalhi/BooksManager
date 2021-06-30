@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.MainPage" 
+             BackgroundImageSource="photo2.jpg">
+    
+    <StackLayout Margin="70,25,70,0">
+        <Label Text="User login"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="Black"
+               FontFamily="Comic Sans MS"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15" 
+               TextColor="Black"
+               FontFamily="Comic Sans MS"/>
+        <Label />
+        <Entry Placeholder="user ID"
+               Text="{Binding strID}"
+               Keyboard="Numeric"
+               MaxLength="8" 
+               TextColor="Black"/>
+        <Entry Placeholder="password"
+               Text="{Binding Password}"
+               IsPassword="true"
+               MaxLength="20" 
+               TextColor="Black"/>
+        <Grid Margin="0,10,0,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0"
+                    Text="log In"
+                    Clicked="OnLoginButtonClicked"
+                    FontSize="15"
+                    FontAttributes="Bold"
+                    BackgroundColor="#87E3F2"
+                    FontFamily="Comic Sans MS"/>
+            <Button Grid.Column="1"
+                    Text="New User Registration"
+                    Clicked="OnRegisterButtonClicked"
+                    FontSize="12" 
+                    FontAttributes="Bold"
+                    BackgroundColor="#87E3F2"
+                    FontFamily="Comic Sans MS"/>
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>

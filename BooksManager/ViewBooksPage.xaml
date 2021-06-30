@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.ViewBooksPage"
+             BackgroundImageSource="photo1.jpg">
+
+        
+    <StackLayout Margin="20,10,20,25">
+        <Entry Placeholder="Enter search"
+           x:Name="Title"
+           FontSize="18"
+               TextColor="Black"
+           TextChanged="OnKeywordChanged"
+           BackgroundColor="Azure"
+           FontFamily="Comic Sans MS"/>
+
+    <ListView x:Name="listView"
+              ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Author}"
+                         DetailColor="#87E3F2"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        
+    <Grid Margin="0,10,0,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0"
+                Text="Add new book"
+                Clicked="OnAddButtonClicked"
+                FontSize="14"
+                FontFamily="Comic Sans MS"
+                FontAttributes="Bold"
+                TextColor="Black"
+                BackgroundColor="#87E3F2"/>
+        <Button Grid.Column="1"
+                Text="Borrowing and returning records"
+                Clicked="OnViewRecordsButtonClicked"
+                FontSize="12"
+                BackgroundColor="#87E3F2"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontFamily="Comic Sans MS"/>
+    </Grid>
+    
+    </StackLayout>
+    
+</ContentPage>

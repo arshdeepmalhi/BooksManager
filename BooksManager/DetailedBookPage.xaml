@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.DetailedBookPage"
+             Title="Book details"
+             BackgroundColor="#B4F6C8">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,25">
+            <Label Text="Book Details"
+               HorizontalOptions="Center"
+               FontSize="30"
+               TextColor="Black"
+               FontFamily="Comic Sans MS"
+               FontAttributes="Bold"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15"
+               TextColor="Black"
+               FontFamily="Comic Sans MS"/>
+        <Label />
+        <Grid Margin="20,10,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Book ID  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"/>
+            <Entry Grid.Row="0"
+                   Grid.Column="1"
+                   Text="{Binding ID}"
+                   FontFamily="Footlight MT Light"
+                   IsReadOnly="true"
+                   TextColor="Black" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Title  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"
+                   TextColor="Black"
+                   FontFamily="Footlight MT Light"/>
+            <Entry Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding Name}"
+                   FontFamily="Footlight MT Light"
+                   IsReadOnly="true"
+                   TextColor="Black" />
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Author  "
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="2"
+                   Grid.Column="1"
+                   FontFamily="Footlight MT Light"
+                   Text="{Binding Author}"
+                   IsReadOnly="true"
+                   TextColor="Black" />
+            <Label Grid.Row="3"
+                   Grid.Column="0"
+                   Text="description  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="1"
+                   FontFamily="Footlight MT Light"
+                   Text="{Binding Description}"
+                   TextColor="Black" />
+            <Label Grid.Row="4"
+                   Grid.Column="0"
+                   Text="status  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18" 
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"/>
+            <Entry Grid.Row="4"
+                   Grid.Column="1"
+                   Text="{Binding strLent}"
+                   TextColor="Black"
+                   IsReadOnly="true" 
+                   FontFamily="Footlight MT Light"/>
+        </Grid>
+            
+        <Grid Margin="20,10,20,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.0*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0"
+                    Text="Borrow"
+                    Clicked="OnBorrowButtonClicked"
+                    FontSize="15"
+                    TextColor="Black"
+                    FontFamily="Comic Sans MS"
+                    BackgroundColor="#87E3F2"
+                    FontAttributes="Bold"/>
+        </Grid>
+        <Grid Margin="20,0,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button Grid.Column="0"
+                    Text="Save changes"
+                    Clicked="OnSaveButtonClicked"
+                    FontSize="15" 
+                    FontFamily="Comic Sans MS"
+                    BackgroundColor="#87E3F2"
+                    TextColor="Black"
+                    FontAttributes="Bold"/>
+            <Button Grid.Column="1"
+                    Text="delete"
+                    Clicked="OnDeleteButtonClicked"
+                    FontSize="15"
+                    FontFamily="Comic Sans MS"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    BackgroundColor="#87E3F2"/>
+        </Grid>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

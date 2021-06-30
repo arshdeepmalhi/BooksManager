@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.RegisterPage"
+             Title="register"
+             BackgroundColor="#B4F6C8">
+    
+    <StackLayout Margin="70,25,70,0">
+        <Label Text="User Registration"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="Black"
+               FontFamily="Comic Sans MS"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15"
+               FontFamily="Comic Sans MS"
+               TextColor="Black"/>
+        <Label />
+        <Entry Placeholder="username"
+               Text="{Binding Name}"
+               FontFamily="Footlight MT Light"
+               IsSpellCheckEnabled="false"
+               MaxLength="8" 
+               TextColor="Black"/>
+        <Entry Placeholder="password"
+               FontFamily="Footlight MT Light"
+               Text="{Binding Password}"
+               IsSpellCheckEnabled="false"
+               IsPassword="true"
+               MaxLength="20" 
+               TextColor="Black"/>
+        <Button Text="Register"
+                Clicked="OnRegisterButtonClicked"
+                FontSize="15"
+                FontFamily="Comic Sans MS"
+                BackgroundColor="#87E3F2"
+                TextColor="Black"
+                FontAttributes="Bold"/>
+    </StackLayout>
+    
+</ContentPage>

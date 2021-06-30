@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BooksManager.DetailedRecordPage"
+             Title="Record details"
+             BackgroundColor="#B4F6C8">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,25">
+            <Label Text="Record Details"
+               HorizontalOptions="Center"
+               FontSize="30"
+               FontAttributes="Bold"
+               FontFamily="Comic Sans MS"
+               TextColor="Black"/>
+        <Label Text="Books Manager"
+               HorizontalOptions="Center"
+               FontSize="15" 
+               TextColor="Black"
+               FontFamily="Comic Sans MS"/>
+        <Label />
+        <Grid Margin="20,10,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Width="0.8*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Record ID  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"/>
+            <Entry Grid.Row="0"
+                   Grid.Column="1"
+                   Text="{Binding ID}"
+                   IsReadOnly="true"
+                   TextColor="Black" />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Text="Book ID  "
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding BookID}"
+                   IsReadOnly="true"
+                   TextColor="Black" />
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Text="Title  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"
+                   FontFamily="Footlight MT Light"
+                   TextColor="Black"/>
+            <Entry Grid.Row="2"
+                   Grid.Column="1"
+                   Text="{Binding BookName}"
+                   IsReadOnly="true"
+                   TextColor="Black"
+                   FontFamily="Footlight MT Light"/>
+            <Label Grid.Row="3"
+                   Grid.Column="0"
+                   Text="Lending date  "
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"
+                   TextColor="Black"
+                   FontFamily="Footlight MT Light"/>
+            <Entry Grid.Row="3"
+                   Grid.Column="1"
+                   Text="{Binding Date}"
+                   IsReadOnly="true"
+                   TextColor="Black" />
+            <Label Grid.Row="4"
+                   Grid.Column="0"
+                   Text="status  "
+                   TextColor="Black"
+                   VerticalOptions="Center"
+                   HorizontalOptions="End"
+                   FontSize="18"/>
+            <Entry Grid.Row="4"
+                   Grid.Column="1"
+                   Text="{Binding strReturned}"
+                   TextColor="Black" />
+        </Grid>
+
+            <Button Text="Return"
+                 Clicked="OnReturnButtonClicked"
+                 FontSize="15"
+                 BackgroundColor="#87E3F2"
+                 TextColor="Black"
+                 FontAttributes="Bold"
+                 FontFamily="Comic Sans MS"/>
+    </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
